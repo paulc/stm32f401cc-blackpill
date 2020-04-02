@@ -39,7 +39,7 @@ int main(void)
 	while (1) {
 		gpio_toggle(GPIOB, GPIO9);	/* LED on/off */
         gpio_toggle(GPIOC, GPIO13);	/* LED on/off */
-		for (i = 0; i < 500000; i++) {	/* Wait a bit. */
+		for (i = 0; i < 1000000; i++) {	/* Wait a bit. */
 			__asm__("nop");
 		}
 	}
