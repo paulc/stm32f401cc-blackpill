@@ -33,13 +33,15 @@ int main(void)
 {
     int i;
 
+    rcc_clock_setup_pll(&rcc_hse_25mhz_3v3[RCC_CLOCK_3V3_84MHZ]);
+
     gpio_setup();
     gpio_toggle(GPIOC, GPIO13);
 
     while (1) {
         gpio_toggle(GPIOB, GPIO9);  /* LED on/off */
         gpio_toggle(GPIOC, GPIO13); /* LED on/off */
-        for (i = 0; i < 1000000; i++) { /* Wait a bit. */
+        for (i = 0; i < 84000000; i++) { /* Wait a bit. */
             __asm__("nop");
         }
     }

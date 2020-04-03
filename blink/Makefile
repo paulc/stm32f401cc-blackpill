@@ -1,5 +1,6 @@
 
 BINARY = blink
+SRCFILES	= blink.c
 
 #LDSCRIPT = stm32f401.ld
 
